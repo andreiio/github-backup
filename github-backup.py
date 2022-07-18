@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import os
 import re
 import sys
@@ -26,7 +24,7 @@ def get_json(url, token):
 
 
 def check_name(name):
-    if not re.match(r"^[-\.\w]*$", name):
+    if not re.match(r"^\w[-\.\w]*$", name):
         raise RuntimeError("invalid name '{0}'".format(name))
     return name
 
