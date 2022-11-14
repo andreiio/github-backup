@@ -1,4 +1,4 @@
-FROM alpine:3.16.2
+FROM alpine:3.16.3
 
 # Prepare Alpine for use
 RUN mkdir -p /home/docker/github-backup/config;
