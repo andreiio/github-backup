@@ -31,4 +31,4 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/user/app:latest
+            ghcr.io/frazzer951/docker-github-backup:latest
