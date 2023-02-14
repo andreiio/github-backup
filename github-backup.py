@@ -1,10 +1,10 @@
+import argparse
+import errno
+import json
 import os
 import re
-import sys
-import json
-import errno
-import argparse
 import subprocess
+import sys
 import urllib.parse
 
 import requests
