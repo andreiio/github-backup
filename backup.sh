@@ -2,7 +2,7 @@
 
 echo "Project: github-backup"
 echo "Author:  Frazzer951"
-echo "Base:    Alpine 3.17.1"
+echo "Base:    Alpine 3.17.2"
 echo "Target:  Unraid"
 echo ""
 
@@ -23,6 +23,6 @@ cp /home/docker/github-backup/config.json /home/docker/github-backup/config/conf
 # Start backup
 while true
  do python3 github-backup.py /home/docker/github-backup/config/config.json
- # chown -R nobody:users /home/docker/backups
+ chown -Rv 99:100 /home/docker/backups
  sleep $SCHEDULE
 done

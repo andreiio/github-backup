@@ -1,4 +1,4 @@
-FROM alpine:3.17.1
+FROM alpine:3.17.2
 
 # Prepare Alpine for use
 RUN mkdir -p /home/docker/github-backup/config;
@@ -16,9 +16,9 @@ RUN apk add --no-cache python3 py3-pip git; \
     pip3 install --upgrade pip; \
     pip3 install -r requirements.txt; \
     chmod -R 777 /home/docker; \
-    chown -R 99:98 /home/docker; \
+    chown -R 99:100 /home/docker; \
     chmod +x backup.sh;
 
-USER 99:98
+USER 99:100
 # Define default command.
 CMD ["./backup.sh"]
