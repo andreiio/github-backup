@@ -21,8 +21,8 @@ sed -i '/token/c\   \"token\" : \"'${TOKEN}'\",' /home/docker/github-backup/conf
 cp /home/docker/github-backup/config.json /home/docker/github-backup/config/config.json
 
 # Start backup
-while true
- do python3 github-backup.py /home/docker/github-backup/config/config.json
- chown -Rv 99:100 /home/docker/backups
- sleep $SCHEDULE
+while true; do
+    python3 github-backup.py /home/docker/github-backup/config/config.json
+    chown -R 99:100 /home/docker/backups
+    sleep $SCHEDULE
 done
