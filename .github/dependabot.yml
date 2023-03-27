@@ -1,24 +1,19 @@
 version: 2
-
 updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "monthly"
     allow:
       - dependency-type: "direct"
     commit-message:
       prefix: "chore:"
-    assignees:
-      - "frazzer951"
 
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: "monthly"
     allow:
       - dependency-type: "direct"
     commit-message:
       prefix: "chore:"
-    assignees:
-      - "frazzer951"
