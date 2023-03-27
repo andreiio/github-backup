@@ -1,7 +1,6 @@
 #!/bin/sh
 
 echo "Project: github-backup"
-echo "Author:  Frazzer951"
 echo "Base:    Alpine 3.17.2"
 echo "Target:  Unraid"
 echo ""
