@@ -1,13 +1,14 @@
+#!/usr/bin/env python3
+
 import argparse
 import errno
 import json
 import os
 import re
+import requests
 import subprocess
 import sys
 import urllib.parse
-
-import requests
 
 
 def get_json(url, token):
@@ -24,7 +25,7 @@ def get_json(url, token):
 
 
 def check_name(name):
-    if not re.match(r"^\w[-\.\w]*$", name):
+    if not re.match(r"^[-\.\w]*$", name):
         raise RuntimeError("invalid name '{0}'".format(name))
     return name
 
